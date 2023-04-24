@@ -34,4 +34,11 @@ public class PhoneBookTest {
         String expected = "Петя";
         Assertions.assertEquals(expected, phoneBook.findByNumber("111-222"));
     }
+
+    @Test
+    void findByNameTest() {
+        phoneBook.add("Таня", "333-444");
+        String expected = "333-444";
+        Assertions.assertEquals(expected, phoneBook.findByName("Таня"));
+    }
 }
