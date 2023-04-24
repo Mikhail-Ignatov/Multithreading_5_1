@@ -3,6 +3,10 @@ package ru.netology;
 import org.apache.commons.collections.BidiMap;
 import org.apache.commons.collections.bidimap.DualHashBidiMap;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class PhoneBook {
 
     BidiMap person = new DualHashBidiMap();
@@ -20,5 +24,9 @@ public class PhoneBook {
 
     public String findByName(String name) {
         return (String) person.get(name);
+    }
+
+    public String printAllNames() {
+        return null;
     }
 }
