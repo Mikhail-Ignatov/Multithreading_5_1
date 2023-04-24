@@ -27,6 +27,7 @@ public class PhoneBookTest {
         int expected = 1;
         Assertions.assertEquals(expected, phoneBook.add(name, number));
     }
+
     @Test
     void findByNumberTest() {
         phoneBook.add("Петя", "111-222");

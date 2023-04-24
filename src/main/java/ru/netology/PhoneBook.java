@@ -1,11 +1,11 @@
 package ru.netology;
 
-import java.util.Map;
-import java.util.TreeMap;
+import org.apache.commons.collections.BidiMap;
+import org.apache.commons.collections.bidimap.DualHashBidiMap;
 
 public class PhoneBook {
 
-    Map<String, String> person = new TreeMap();
+    BidiMap person = new DualHashBidiMap();
 
     public int add(String name, String number) {
         if (!person.containsKey(name)) {
@@ -13,7 +13,8 @@ public class PhoneBook {
         }
         return person.size();
     }
+
     public String findByNumber(String number) {
-        return null;
+        return (String) person.getKey(number);
     }
 }
